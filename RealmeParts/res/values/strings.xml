@@ -45,6 +45,10 @@
     <string name="RealmeParts_summary">Gestures and Tweaks</string>
     <string name="screen_off_gestures">Screen-off gestures</string>
     <string name="gestures">Gestures</string>
+    <string name="enable_dt2w_title">Enable Double Tap</string>
+    <string name="enable_dt2w_summary">Enable Double Tap Gestures</string>
+    <string name="dt2w_title">Double Tap</string>
+    <string name="haptic_feedback_title">Haptic Feedback</string>
 
     <!-- Shortcut actions -->
     <string name="shortcut_action_none">None</string>

@@ -447,9 +447,6 @@
          vendor fingerprint HAL implementations. -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
 
-    <!-- Whether device supports double tap to wake -->
-    <bool name="config_supportDoubleTapWake">true</bool>
-
     <!-- Full screen aspect ratio -->
     <bool name="config_haveHigherAspectRatioScreen">true</bool>
 

@@ -17,28 +17,42 @@
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-        <SwitchPreference
-            android:key="enable_gestures"
-            android:title="@string/enable_gestures_title"
-            android:persistent="false"
-            android:summary="@string/enable_gestures_summary" />
+        <PreferenceCategory
+            android:key="dt2w"
+            android:title="@string/dt2w_title" >
 
         <SwitchPreference
-            android:key="gesture_haptic_feedback"
+            android:key="enable_dt2w"
+            android:title="@string/enable_dt2w_title"
             android:persistent="false"
-            android:title="@string/touchscreen_gesture_haptic_feedback"
-            android:summary="@string/touchscreen_gesture_haptic_feedback_summary"
-            android:dependency="enable_gestures" />
+            android:summary="@string/enable_dt2w_summary" />
+            <Preference
+                android:key="gesture_double_tap"
+                android:title="@string/gesture_double_tap_title"
+                android:persistent="false"
+                android:dependency="enable_dt2w" />
+        </PreferenceCategory>
+
+        <PreferenceCategory
+            android:key="haptic"
+            android:title="@string/haptic_feedback_title" >
+
+            <SwitchPreference
+                android:key="gesture_haptic_feedback"
+                android:persistent="false"
+                android:title="@string/touchscreen_gesture_haptic_feedback"
+                android:summary="@string/touchscreen_gesture_haptic_feedback_summary" />
+        </PreferenceCategory>
 
         <PreferenceCategory
             android:key="gestures"
             android:title="@string/gestures_title" >
 
-            <Preference
-                android:key="gesture_double_tap"
-                android:title="@string/gesture_double_tap_title"
+            <SwitchPreference
+                android:key="enable_gestures"
+                android:title="@string/enable_gestures_title"
                 android:persistent="false"
-                android:dependency="enable_gestures" />
+                android:summary="@string/enable_gestures_summary" />
 
             <Preference
                 android:key="gesture_w"

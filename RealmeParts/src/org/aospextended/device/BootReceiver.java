@@ -59,6 +59,9 @@ private void restore(String file, String value) {
                 KernelControl.enableGestures(
                         screenOffGestureSharedPreferences.getBoolean(
                         ScreenOffGesture.PREF_GESTURE_ENABLE, true));
+                KernelControl.enableDt2w(
+                        screenOffGestureSharedPreferences.getBoolean(
+                        ScreenOffGesture.PREF_DT2W_ENABLE, true));
         }
 		DozeUtils.checkDozeService(context);
     }
