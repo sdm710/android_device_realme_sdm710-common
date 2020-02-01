@@ -27,27 +27,27 @@ import org.aospextended.device.KernelControl;
 import org.aospextended.device.settings.ScreenOffGesture;
 import org.aospextended.device.util.Utils;
 import org.aospextended.device.doze.DozeUtils;
+import org.aospextended.device.vibration.VibratorStrengthPreference;
 import java.io.File;
 import androidx.preference.PreferenceManager;
 
 public class BootReceiver extends BroadcastReceiver {
 
-
-private void restore(String file, boolean enabled) {
+    private void restore(String file, boolean enabled) {
         if (file == null) {
             return;
         }
-if (enabled) {
+        if (enabled) {
             Utils.writeValue(file, "1");
         }
     }
 
-private void restore(String file, String value) {
+    private void restore(String file, String value) {
         if (file == null) {
             return;
         }
-      Utils.writeValue(file, value);
-  }
+        Utils.writeValue(file, value);
+    }
 
 
     @Override
@@ -64,6 +64,7 @@ private void restore(String file, String value) {
                         ScreenOffGesture.PREF_DT2W_ENABLE, true));
         }
 		DozeUtils.checkDozeService(context);
+                VibratorStrengthPreference.restore(context);
     }
 
     private String getPreferenceString(Context context, String key, String defaultValue) {

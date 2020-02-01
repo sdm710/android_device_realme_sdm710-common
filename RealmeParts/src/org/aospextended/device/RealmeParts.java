@@ -30,6 +30,7 @@ import androidx.preference.TwoStatePreference;
 
 import org.aospextended.device.settings.ScreenOffGestureSettings;
 import org.aospextended.device.doze.DozeSettingsActivity;
+import org.aospextended.device.vibration.VibratorStrengthPreference;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -52,6 +53,7 @@ public class RealmeParts extends PreferenceFragment implements
     private Preference mGesturesPref;
     private Context mContext;
     private SharedPreferences mPreferences;
+    private VibratorStrengthPreference mVibratorStrength;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -74,7 +76,10 @@ public class RealmeParts extends PreferenceFragment implements
                          return true;
                      }
                 });
-}
+
+        mVibratorStrength = (VibratorStrengthPreference) findPreference(VibratorStrengthPreference.KEY_VIBSTRENGTH);
+        mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
+    }
 
     @Override
     public boolean onPreferenceTreeClick(Preference preference) {

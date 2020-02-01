@@ -6,6 +6,7 @@
 
         <PreferenceScreen
                 android:key="screen_gestures"
+                android:icon="@drawable/ic_gestures"
                 android:fragment="org.aospextended.device.settings.ScreenOffGestureSettings"
                 android:summary="@string/gestures_dashboard_summary"
                 android:title="@string/screen_off_gestures" />
@@ -13,15 +14,23 @@
     </PreferenceCategory>
 	
 	
-	<PreferenceCategory
+    <PreferenceCategory
             android:title="@string/ambient_display_title">
 
         <PreferenceScreen
                 android:key="doze"
+                android:icon="@drawable/ic_doze"
                 android:fragment="org.aospextended.device.doze.DozeSettingsActivity"
                 android:summary="@string/ambient_display_gestures_summary"
                 android:title="@string/ambient_display_gestures_title" />
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/vibrator_intensity_control">
+
+        <org.aospextended.device.vibration.VibratorStrengthPreference
+	    android:key="vib_strength"
+            android:icon="@drawable/ic_vibrate" />
+    </PreferenceCategory>
 </PreferenceScreen>
