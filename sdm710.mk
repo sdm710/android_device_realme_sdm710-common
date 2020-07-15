@@ -190,7 +190,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     init.network.rc \
-    ueventd.qcom.rc
+    ueventd.qcom.rc \
+    init.devicesetting.rc
 
 # Display
 PRODUCT_PACKAGES += \
