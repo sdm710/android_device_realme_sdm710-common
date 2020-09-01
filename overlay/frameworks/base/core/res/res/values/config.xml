@@ -463,4 +463,9 @@
     <!-- Whether device ignores the RSSNR signal implementation -->
     <bool name="config_ignoreRssnrSignalLevel">true</bool>
 
+    <string name="config_currentPath">/sys/class/power_supply/battery/current_now</string>
+    <string name="config_voltagePath">/sys/class/power_supply/battery/voltage_now</string>
+    <bool name="showInvertedCurrent">true</bool>
+    <integer name="config_battCurrentDivider" translatable="false">1</integer>
+
 </resources>
