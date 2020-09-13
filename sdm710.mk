@@ -75,6 +75,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AntHalService
 
+PRODUCT_PACKAGES += messaging
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-service \
@@ -167,7 +169,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.rc
+    ueventd.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -176,6 +178,7 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.graphics.mapper@2.0-impl-qti-display \
     gralloc.sdm710 \
+    hwcomposer.sdm710 \
     libdisplayconfig \
     libdisplayconfig.vendor \
     libhwc2on1adapter \
@@ -187,13 +190,14 @@ PRODUCT_PACKAGES += \
     memtrack.sdm710 \
     vendor.display.config@1.7 \
     vendor.qti.hardware.display.allocator@1.0-service \
-    libgui_vendor
+    libgui_vendor \
+    libhwbinder
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service \
-    android.hardware.drm@1.2-service.clearkey
+    android.hardware.drm@1.3-service.clearkey
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -296,7 +300,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.0-service \
+    android.hardware.power@1.0-impl
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -333,6 +338,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.0 \
     android.hardware.radio.deprecated@1.0 \
     libprotobuf-cpp-full \
+    libprotobuf-cpp-full.vendor \
+    libprotobuf-cpp-lite \
+    libprotobuf-cpp-lite.vendor \
     librmnetctl \
     libxml2
 
@@ -361,8 +369,8 @@ PRODUCT_PACKAGES += \
     qcrilhook
 
 PRODUCT_BOOT_JARS += \
-    telephony-ext \
-    qcrilhook
+    telephony-ext
+    #qcrilhook
 
 # TextClassifier
 PRODUCT_PACKAGES += \
@@ -375,7 +383,7 @@ PRODUCT_PACKAGES += \
     thermal.sdm710
 
 # Touch HAL
-PRODUCT_PACKAGES += \
+#PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.realme_sdm710
 
 # Trust HAL
