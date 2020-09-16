@@ -128,7 +128,9 @@ PRODUCT_COPY_FILES += \
 # Binder
 PRODUCT_PACKAGES += \
     libhwbinder \
-    libhwbinder.vendor
+    libhwbinder.vendor \
+    libhidltransport \
+    libhidltransport.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
