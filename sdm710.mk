@@ -177,7 +177,7 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.target.rc \
-    ueventd.rc
+    ueventd.qcom.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -306,7 +306,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.0-service \
+    android.hardware.power@1.0-impl
 
 # QMI
 PRODUCT_PACKAGES += \
