@@ -115,7 +115,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapsize=512m \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=4m \
-    dalvik.vm.heapmaxfree=16m
+    dalvik.vm.heapmaxfree=16m \
+		pm.dexopt.ab-ota=speed-profile \
+		dalvik.vm.dex2oat-filter=speed \
+		dalvik.vm.image-dex2oat-filter=speed \
+		ro.vendor.qti.am.reschedule_service=true \
+		ro.sys.fw.dex2oat_thread_count=8 \
+		dalvik.vm.boot-dex2oat-threads=8 \
+		dalvik.vm.dex2oat-threads=4
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
