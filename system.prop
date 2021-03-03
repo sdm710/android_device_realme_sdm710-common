@@ -48,6 +48,11 @@ sdm.debug.disable_inline_rotator=1
 sdm.debug.disable_inline_rotator_secure=1
 sdm.debug.prefersplit=1
 
+# Iorap
+iorapd.perfetto.enable=true
+iorapd.readahead.enable=true
+ro.iorapd.enable=true
+
 # Media
 audio.offload.video=true
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
@@ -73,20 +78,20 @@ persist.dbg.ims_volte_enable=1
 
 # RIL
 DEVICE_PROVISIONED=1
-persist.radio.multisim.config=dsds 
-persist.vendor.radio.apm_sim_not_pwdn=1 
-persist.vendor.radio.custom_ecc=1 
+persist.radio.multisim.config=dsds
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.mt_sms_ack=30
-persist.vendor.radio.procedure_bytes=SKIP 
-persist.vendor.radio.report_codec=1 
-persist.vendor.radio.sib16_support=1 
+persist.vendor.radio.procedure_bytes=SKIP
+persist.vendor.radio.report_codec=1
+persist.vendor.radio.sib16_support=1
 persist.radio.atfwd.start=true
-persist.radio.VT_ENABLE=1 
-persist.radio.volte.dan_support=true 
-persist.data.iwlan=1 
-persist.data.iwlan.ipsec.ap=1 
+persist.radio.VT_ENABLE=1
+persist.radio.volte.dan_support=true
+persist.data.iwlan=1
+persist.data.iwlan.ipsec.ap=1
 persist.sys.cust.lte_config=true
-service.qti.ims.enabled=1 
+service.qti.ims.enabled=1
 persist.vendor.qti.telephony.vt_cam_interface=2
 ro.telephony.iwlan_operation_mode=legacy
 persist.radio.flexmap_type=none
