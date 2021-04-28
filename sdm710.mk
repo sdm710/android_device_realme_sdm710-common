@@ -278,6 +278,10 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.realme_sdm710 \
     lights.sdm710
 
+# LiveDisplay
+PRODUCT_PACKAGES += \
+    vendor.lineage.livedisplay@2.0-service-sdm
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -312,7 +316,8 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libOmxVidcCommon \
-    libstagefrighthw
+    libstagefrighthw \
+    libplatformconfig
 
 # Power
 PRODUCT_PACKAGES += \
