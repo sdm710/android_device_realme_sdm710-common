@@ -151,6 +151,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     Snap
 
+# Charger
+PRODUCT_PACKAGES += \
+    libsuspend
+
 # CNE
 PRODUCT_PACKAGES += \
     cneapiclient \
