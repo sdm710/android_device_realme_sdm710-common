@@ -283,7 +283,7 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.biometrics.face</name>
+        <name>vendor.oplus.hardware.biometrics.face</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
@@ -292,7 +292,7 @@
         </interface>
     </hal>
     <hal format="hidl">
-        <name>vendor.oppo.hardware.biometrics.fingerprint</name>
+        <name>vendor.oplus.hardware.biometrics.fingerprint</name>
         <transport>hwbinder</transport>
         <version>2.1</version>
         <interface>
