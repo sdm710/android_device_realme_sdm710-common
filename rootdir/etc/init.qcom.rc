@@ -694,7 +694,6 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
     group system
-    disabled
 
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
