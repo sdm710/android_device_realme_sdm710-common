@@ -856,6 +856,8 @@ vendor/etc/init/port-bridge.rc
 vendor/etc/init/qcrild.rc
 vendor/etc/init/ipa_fws.rc
 vendor/etc/init/ipacm-diag.rc
+vendor/etc/init/vendor.qti.rmt_storage.rc
+vendor/etc/init/vendor.qti.tftp.rc
 vendor/lib64/libconfigdb.so
 vendor/lib64/libdsi_netctrl.so
 vendor/lib64/liblqe.so
@@ -869,6 +871,7 @@ vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
 vendor/lib64/libqcmaputils.so
 vendor/lib64/libqcrilFramework.so
+vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqrtr.so
 vendor/lib64/libqsocket.so
 vendor/lib64/libril-qc-hal-qmi.so
@@ -912,6 +915,7 @@ vendor/lib/libnetmgr_rmnet_ext.so
 vendor/lib/libpdmapper.so
 vendor/lib/libpdnotifier.so
 vendor/lib/libqcrilFramework.so
+vendor/lib/libqcrildatactl.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
 vendor/lib/libril-qc-ltedirectdisc.so
@@ -1063,6 +1067,8 @@ odm/lib64/vendor.oplus.hardware.ims@1.0.so
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate@1.0-service
 vendor/bin/sensors.qti
+vendor/etc/init/vendor.sensors.qti.rc
+vendor/etc/init/init.vendor.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/sensors/sns_reg_config
@@ -1143,6 +1149,7 @@ vendor/lib/libscveObjectTracker_stub.so
 # Thermal
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine.conf
+vendor/etc/init/init_thermal-engine.rc
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 

@@ -145,6 +145,10 @@ init_DMM()
     esac
 }
 
+#
+# For controlling console and shell on console on 8960 - perist.serial.enable 8960
+# On other target use default ro.debuggable property.
+#
 case "$target" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
         insmod /system/lib/modules/ss_mfcinit.ko

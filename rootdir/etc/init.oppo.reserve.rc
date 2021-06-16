@@ -21,6 +21,9 @@ on post-fs-data
   mkdir /mnt/vendor/opporeserve/system/config
   chown system system /mnt/vendor/opporeserve/system/config
   chmod 0771 /mnt/vendor/opporeserve/system/config
+  mkdir /mnt/vendor/opporeserve/system/ssv
+  chown system system /mnt/vendor/opporeserve/system/ssv
+  chmod 0771 /mnt/vendor/opporeserve/system/ssv
   mkdir /mnt/vendor/opporeserve/media
   chown system system /mnt/vendor/opporeserve/media
   chmod 0771 /mnt/vendor/opporeserve/media
@@ -62,6 +65,31 @@ on post-fs-data
   mkdir /mnt/vendor/opporeserve/media/ColorOS/HeytapID
   chown system system /mnt/vendor/opporeserve/media/ColorOS/HeytapID
   chmod 0771 /mnt/vendor/opporeserve/media/ColorOS/HeytapID
+
+##ifdef OPLUS_FEATURE_TOOLS
+  #Zhuan.Pan@BSP.Tool, Add for mount stamp.db
+  mkdir /mnt/vendor/opporeserve/media/log/stamp
+  chmod 0771 /mnt/vendor/opporeserve/media/log/stamp
+  chown system system /mnt/vendor/opporeserve/media/log/stamp
+##endif OPLUS_FEATURE_TOOLS
+
+#ifdef OPLUS_FEATURE_SHUTDOWN_DETECT
+#Bin.Xu@BSP.kernel.Stability, 2020/4/28, add for shutdown_detect
+  mkdir /mnt/vendor/opporeserve/media/log/shutdown
+  chown system system /mnt/vendor/opporeserve/media/log/shutdown
+  chmod 0771 /mnt/vendor/opporeserve/media/log/shutdown
+#endif
+
+#ifdef OPLUS_FEATURE_PHOENIX
+  mkdir /mnt/vendor/opporeserve/media/log/hang_oppo
+  chown system system /mnt/vendor/opporeserve/media/log/hang_oppo
+  chmod 0771 /mnt/vendor/opporeserve/media/log/hang_oppo
+#endif
+
+  #Fangfang.Hui@BSP.Stability, 2020/09/04, Add for backup the feedback log to opporeserve2 partition
+  mkdir /mnt/vendor/opporeserve/media/log/minidump
+  chmod 0771 /mnt/vendor/opporeserve/media/log/minidump
+  chown system system /mnt/vendor/opporeserve/media/log/minidump
 
   restorecon_recursive /mnt/vendor/opporeserve
 

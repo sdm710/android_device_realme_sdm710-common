@@ -182,8 +182,9 @@ PRODUCT_PACKAGES += \
     init.oppo.debug.diag.rc \
     init.oppo.reserve.rc \
     init.oppo.sensor.rc \
-    init.oppo.vendor.fingerprint.rc \
+    init.oppo.rc \
     init.oppo.vendor.motor.rc \
+    init.oppo.display.rc \
     init.qcom.factory.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
