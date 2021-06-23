@@ -1,0 +1,2 @@
+get_prop(radio, qcom_ims_prop);
+get_prop(radio, vendor_persist_camera_prop);
