@@ -55,6 +55,7 @@ import java.io.*;
 import android.widget.Toast;
 
 import org.aospextended.device.R;
+import org.aospextended.device.device.preferences.SecureSettingListPreference;
 
 public class RealmeParts extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -67,6 +68,13 @@ public class RealmeParts extends PreferenceFragment implements
     private Preference mDozePref;
     private Preference mGesturesPref;
     private VibratorStrengthPreference mVibratorStrength;
+    public static final String PREF_GPUBOOST = "gpuboost";
+    public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.realmeparts.gpu_profile";
+
+    public static final String PREF_CPUBOOST = "cpuboost";
+    public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.realmeparts.cpu_profile";
+    private SecureSettingListPreference mGPUBOOST;
+    private SecureSettingListPreference mCPUBOOST;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -93,6 +101,17 @@ public class RealmeParts extends PreferenceFragment implements
 
         mVibratorStrength = (VibratorStrengthPreference) findPreference(VibratorStrengthPreference.KEY_VIBSTRENGTH);
         mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
+
+        //boosts
+        mGPUBOOST = (SecureSettingListPreference) findPreference(PREF_GPUBOOST);
+        mGPUBOOST.setValue(FileUtils.getStringProp(GPUBOOST_SYSTEM_PROPERTY, "0"));
+        mGPUBOOST.setSummary(mGPUBOOST.getEntry());
+        mGPUBOOST.setOnPreferenceChangeListener(this);
+
+        mCPUBOOST = (SecureSettingListPreference) findPreference(PREF_CPUBOOST);
+        mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
+        mCPUBOOST.setSummary(mCPUBOOST.getEntry());
+        mCPUBOOST.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -113,7 +132,24 @@ public class RealmeParts extends PreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        final String key = preference.getKey();
+      final String key = preference.getKey();
+        switch (key) {
+
+            case PREF_GPUBOOST:
+               mGPUBOOST.setValue((String) newValue);
+               mGPUBOOST.setSummary(mGPUBOOST.getEntry());
+               FileUtils.setStringProp(GPUBOOST_SYSTEM_PROPERTY, (String) newValue);
+               break;
+            case PREF_CPUBOOST:
+               mCPUBOOST.setValue((String) newValue);
+               mCPUBOOST.setSummary(mCPUBOOST.getEntry());
+               FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY, (String) newValue);
+               break;
+
+
+            default:
+                break;
+        }
         return true;
     }
 }

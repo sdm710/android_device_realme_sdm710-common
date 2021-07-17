@@ -28,7 +28,7 @@
     <string name="enable_gestures_summary">Enable screen off gestures</string>
     <string name="gestures_title">Gestures</string>
     <string name="gesture_double_tap_title">Gesture Double Tap</string>
-    <string name="gesture_w_title">Gesture W</string>	
+    <string name="gesture_w_title">Gesture W</string>
     <string name="gesture_m_title">Gesture M</string>
     <string name="gesture_s_title">Gesture S</string>
     <string name="gesture_circle_title">Gesture Circle</string>
@@ -174,5 +174,23 @@
     <!-- Raise to wake strings-->
     <string name="raise_to_wake_gesture_title">Raise to wake</string>
     <string name="raise_to_wake_gesture_summary">Wake up the device instead of pulsing notification</string>
+
+    <!-- Boosts -->
+    <string name="boost_title">Boost</string>
+    <string name="gpuboost_title">GPU boost</string>
+    <string name="cpuboost_title">CPU boost</string>
+    <string name="gpuboost_dialogTitle">Select your GPU boost level</string>
+    <string name="cpuboost_dialogTitle">Select your CPU boost level</string>
+
+    <!-- GPU/CPU Boost Presets -->
+    <string name="gpuboost_high">High</string>
+    <string name="gpuboost_medium">Medium</string>
+    <string name="gpuboost_low">Low</string>
+    <string name="gpuboost_disable">Disable</string>
+
+    <string name="cpuboost_high">High</string>
+    <string name="cpuboost_medium">Medium</string>
+    <string name="cpuboost_low">Low</string>
+    <string name="cpuboost_disable">Disable</string>
 
 </resources>

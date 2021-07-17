@@ -400,6 +400,67 @@ on property:init.svc.zygote=restarting
     stop ppd
 #endif/*VENDOR_EDIT*/
 
+# Boosts
+# GPU/CPU Boost
+
+    chown system system /sys/module/cpu_boost/parameters/input_boost_freq
+    chown system system /sys/module/cpu_boost/parameters/input_boost_ms
+    chmod 0644 /sys/module/cpu_boost/parameters/input_boost_freq
+    chmod 0644 /sys/module/cpu_boost/parameters/input_boost_ms
+
+    chown system system /sys/module/governor_msm_adreno_tz/parameters/boost_freq
+    chown system system /sys/module/governor_msm_adreno_tz/parameters/boost_duration
+    chmod 0644 /sys/module/governor_msm_adreno_tz/parameters/boost_freq
+    chmod 0644 system /sys/module/governor_msm_adreno_tz/parameters/boost_duration
+
+    # Enable {cpu, gpu}boost support
+    setprop gpuboost.support 1
+    setprop cpuboost.support 1
+
+    # Run realmeparts script to initialize boost props
+    exec u:r:init:s0 root root -- /vendor/bin/init.realmeparts.sh
+    exec u:r:su:s0 root root -- /vendor/bin/init.realmeparts.sh
+
+# GPU-Disable (default profile)
+on property:persist.realmeparts.gpu_profile=0
+    write /sys/module/governor_msm_adreno_tz/parameters/boost_freq "0"
+    write system /sys/module/governor_msm_adreno_tz/parameters/boost_duration "0"
+
+# GPU-Low
+on property:persist.realmeparts.gpu_profile=1
+    write /sys/module/governor_msm_adreno_tz/parameters/boost_freq "267"
+    write system /sys/module/governor_msm_adreno_tz/parameters/boost_duration "200"
+
+# GPU-Medium
+on property:persist.realmeparts.gpu_profile=2
+    write /sys/module/governor_msm_adreno_tz/parameters/boost_freq "355"
+    write system /sys/module/governor_msm_adreno_tz/parameters/boost_duration "500"
+
+# GPU-High
+on property:persist.realmeparts.gpu_profile=3
+    write /sys/module/governor_msm_adreno_tz/parameters/boost_freq "430"
+    write system /sys/module/governor_msm_adreno_tz/parameters/boost_duration "1000"
+
+# CPU-Disable (default profile)
+on property:persist.realmeparts.cpu_profile=0
+write /sys/module/cpu_boost/parameters/input_boost_freq "0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0"
+write /sys/module/cpu_boost/parameters/input_boost_ms 0
+
+# CPU-Low
+on property:persist.realmeparts.cpu_profile=1
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:748000 1:748000 2:748000 3:748000 4:748000 5:748000 6:979000 7:979000"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 200
+
+# CPU-Medium
+on property:persist.realmeparts.cpu_profile=2
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1209000 1:1209000 2:1209000 3:1209000 4:1209000 5:1209000 6:1363000 7:1363000"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 500
+
+# CPU-High
+on property:persist.realmeparts.cpu_profile=3
+    write /sys/module/cpu_boost/parameters/input_boost_freq "0:1516000 1:1516000 2:1516000 3:1516000 4:1996000 5:1996000 6:1996000 7:1996000"
+    write /sys/module/cpu_boost/parameters/input_boost_ms 1000
+
 #service nqs /system/bin/nqs
 #    class late_start
 #    socket nqs_qsb_comm stream 660 system system
