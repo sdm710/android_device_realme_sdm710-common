@@ -103,21 +103,25 @@ vendor/lib/liba2dpoffload.so
 vendor/lib64/liba2dpoffload.so
 
 # Audio Dolby
--odm/etc/vintf/manifest/manifest_dax_dolby.xml
-odm/etc/dolby/multimedia_dolby_dax_default.xml
-odm/etc/init/vendor.dolby_v351.hardware.dms@1.0-service.rc
-odm/bin/hw/vendor.dolby_v351.hardware.dms@1.0-service
-odm/lib/libstagefright_soft_ddpdec_v351.so
-odm/lib/libstagefrightdolby_v351.so
-odm/lib/libdapparamstorage_v351.so
-odm/lib/libstagefright_soft_ac4dec_v351.so
-odm/lib/vendor.dolby_v351.hardware.dms@1.0-impl.so
-odm/lib/vendor.dolby_v351.hardware.dms@1.0.so
-odm/lib/libdlbdsservice_v351.so
-odm/lib64/libdapparamstorage_v351.so
-odm/lib64/vendor.dolby_v351.hardware.dms@1.0-impl.so
-odm/lib64/vendor.dolby_v351.hardware.dms@1.0.so
-odm/lib64/libdlbdsservice_v351.so
+-vendor/etc/vintf/manifest/manifest_dax_dolby.xml
+vendor/etc/media_codecs_dolby_audio.xml 
+-app/MotoDolbyV3/MotoDolbyV3.apk
+-product/priv-app/daxService/daxService.apk
+etc/permissions/com.motorola.dolby.dolbyui.features.xml
+etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
+product/etc/permissions/com.dolby.daxservice.xml
+vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
+vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
+vendor/etc/dolby/dax-default.xml
+vendor/lib/libdapparamstorage.so
+vendor/lib/libstagefrightdolby.so
+vendor/lib/vendor.dolby.hardware.dms@1.0.so
+vendor/lib/soundfx/libswdap.so
+vendor/lib64/libdapparamstorage.so
+vendor/lib64/libdlbdsservice.so
+vendor/lib64/soundfx/libswdap.so
+vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
+vendor/lib64/vendor.dolby.hardware.dms@1.0.so
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti
