@@ -833,8 +833,10 @@ vendor/lib64/libqmi_csvt_srvc.so
 vendor/lib/libqmi_cci.so
 vendor/lib64/libqmi_cci.so
 
+# Radio - from LA.QSSI.11.0.r1-10400-qssi.0
+system_ext/framework/qti-telephony-common.jar|1fd37129f961e58f9d1189736e2cb46290666b97
+
 # Radio
-system_ext/framework/qti-telephony-common.jar
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk
 system_ext/etc/permissions/qcrilhook.xml
 system_ext/etc/permissions/telephonyservice.xml
