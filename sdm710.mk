@@ -369,7 +369,13 @@ PRODUCT_COPY_FILES += \
 # QTI Perf
 PRODUCT_PACKAGES += \
    libtflite \
-   libtextclassifier_hash
+   libtextclassifier_hash \
+	 QPerformance \
+	 UxPerformance
+
+PRODUCT_BOOT_JARS += \
+	 QPerformance \
+	 UxPerformance
 
 # RCS
 PRODUCT_PACKAGES += \
