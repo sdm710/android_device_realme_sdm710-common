@@ -19,4 +19,17 @@
 
     <!-- String indicating the package name of the device ImsService implementation for RCS. -->
     <string name="config_ims_rcs_package" translatable="false">com.android.service.ims</string>
+
+    <!-- Flag indicating if the phone is a world phone -->
+    <bool name="world_phone">true</bool>
+
+    <!-- Flag indicating if dtmf tone type is enabled -->
+    <bool name="dtmf_type_enabled">true</bool>
+
+    <!-- Determine whether calls to mute the microphone in PhoneUtils
+         are routed through the android.media.AudioManager class (true) or through
+         the com.android.internal.telephony.Phone interface (false). -->
+    <bool name="send_mic_mute_to_AudioManager">true</bool>
+
+
 </resources>
