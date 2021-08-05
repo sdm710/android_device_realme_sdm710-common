@@ -7,7 +7,9 @@
         <PreferenceScreen
                 android:key="screen_gestures"
                 android:summary="@string/gestures_dashboard_summary"
+                android:icon="@drawable/ic_settings_gestures"
                 android:title="@string/screen_off_gestures" />
+
 
     </PreferenceCategory>
 
@@ -17,6 +19,7 @@
         <PreferenceScreen
                 android:key="doze"
                 android:summary="@string/ambient_display_gestures_summary"
+                android:icon="@drawable/ic_ambient"
                 android:title="@string/ambient_display_gestures_title" />
 
     </PreferenceCategory>
@@ -50,6 +53,19 @@
           android:icon="@drawable/ic_cpuboost"
           android:defaultValue="0"
           android:title="@string/cpuboost_title" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+      android:key="batterysaver"
+      android:title="@string/batterysaver_title" >
+
+      <SwitchPreference
+          android:key="battery_saver"
+          android:defaultValue="false"
+          android:disableDependentsState="true"
+          android:title="@string/battery_saver_title"
+          android:icon="@drawable/ic_batterysaver"
+          android:summary="@string/battery_saver_summary" />
 
     </PreferenceCategory>
 </PreferenceScreen>

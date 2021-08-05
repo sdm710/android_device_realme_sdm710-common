@@ -68,6 +68,8 @@ public class RealmeParts extends PreferenceFragment implements
     private Preference mDozePref;
     private Preference mGesturesPref;
     private VibratorStrengthPreference mVibratorStrength;
+
+    public static final String DEFAULT_VALUE = "0";
     public static final String PREF_GPUBOOST = "gpuboost";
     public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.realmeparts.gpu_profile";
 
@@ -75,6 +77,10 @@ public class RealmeParts extends PreferenceFragment implements
     public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.realmeparts.cpu_profile";
     private SecureSettingListPreference mGPUBOOST;
     private SecureSettingListPreference mCPUBOOST;
+
+    public static final String BATTERY_SAVER = "battery_saver";
+    public static final String BATTERYSAVER_SYSTEM_PROPERTY = "persist.realmeparts.battery_saver";
+    private SwitchPreference mbatterysaver;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -112,6 +118,13 @@ public class RealmeParts extends PreferenceFragment implements
         mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
         mCPUBOOST.setSummary(mCPUBOOST.getEntry());
         mCPUBOOST.setOnPreferenceChangeListener(this);
+
+        //battery Saver
+        mbatterysaver = (SwitchPreference) findPreference(BATTERY_SAVER);
+        mbatterysaver.setOnPreferenceChangeListener(this);
+        mCPUBOOST.setDependency(BATTERY_SAVER);
+        mGPUBOOST.setDependency(BATTERY_SAVER);
+
     }
 
     @Override
@@ -144,6 +157,15 @@ public class RealmeParts extends PreferenceFragment implements
                mCPUBOOST.setValue((String) newValue);
                mCPUBOOST.setSummary(mCPUBOOST.getEntry());
                FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY, (String) newValue);
+               break;
+            case BATTERY_SAVER:
+               FileUtils.setProp(BATTERYSAVER_SYSTEM_PROPERTY, (Boolean) newValue);
+               mGPUBOOST.setValue(DEFAULT_VALUE);
+               mGPUBOOST.setSummary(mGPUBOOST.getEntry());
+               mCPUBOOST.setValue(DEFAULT_VALUE);
+               mCPUBOOST.setSummary(mCPUBOOST.getEntry());
+               FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY,DEFAULT_VALUE);
+               FileUtils.setStringProp(GPUBOOST_SYSTEM_PROPERTY,DEFAULT_VALUE);
                break;
 
 

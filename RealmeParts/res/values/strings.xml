@@ -193,4 +193,9 @@
     <string name="cpuboost_low">Low</string>
     <string name="cpuboost_disable">Disable</string>
 
+    <!--Battery Saver-->
+    <string name="batterysaver_title">Battery Saver</string>
+    <string name="battery_saver_title">Battery Saver</string>
+    <string name="battery_saver_summary">Kernelspace Battery Saver (Disables all boosts kernel level)</string>
+
 </resources>

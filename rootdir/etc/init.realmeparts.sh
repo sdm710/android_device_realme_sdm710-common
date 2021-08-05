@@ -10,3 +10,7 @@ fi
 if [[ `getprop persist.realmeparts.cpu_profile` == "" ]]; then
     setprop persist.realmeparts.cpu_profile 0
 fi
+
+if [[ `getprop persist.realmeparts.battery_saver` == "" ]]; then
+    setprop persist.realmeparts.battery_saver 0
+fi
