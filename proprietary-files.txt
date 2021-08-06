@@ -791,6 +791,14 @@ system_ext/lib64/vendor.qti.hardware.perf@2.1.so
 system_ext/lib64/vendor.qti.hardware.perf@2.2.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
 
+# Power & Health
+vendor/bin/hw/android.hardware.health@2.1-service
+vendor/bin/hw/android.hardware.power@1.0-service
+vendor/etc/init/android.hardware.health@2.1-service.rc
+vendor/etc/init/android.hardware.power@1.0-service.rc
+vendor/lib64/hw/android.hardware.health@2.0-impl-2.1-qti.so
+vendor/lib/hw/android.hardware.health@2.0-impl-2.1-qti.so
+
 # Qualcomm Display Utils
 vendor/lib/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
