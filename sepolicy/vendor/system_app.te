@@ -1,5 +1,11 @@
 #allow system_app vibrator_sysfs:file rw_file_perms;
 allow system_app proc_touchpanel:file rw_file_perms;
+allow system_app proc_touchpanel:dir search;
+allow system_app proc_touchpanel:file rw_file_perms;
+allow system_app sysfs_oppo_display:dir search;
+allow system_app sysfs_oppo_display:file { getattr open read write };
+allow system_app sysfs_usb_supply:dir search;
+allow system_app sysfs_usb_supply:file { getattr open read write };
 
 r_dir_file(system_app, proc_touchpanel);
 #r_dir_file(system_app, vibrator_sysfs);
