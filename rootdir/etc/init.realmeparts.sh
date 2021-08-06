@@ -3,12 +3,8 @@
 # Based on work by @ronaxdevil
 
 # If there is not a persist value, we need to set one
-if [[ `getprop persist.realmeparts.gpu_profile` == "" ]]; then
-    setprop persist.realmeparts.gpu_profile 0
-fi
-
-if [[ `getprop persist.realmeparts.cpu_profile` == "" ]]; then
-    setprop persist.realmeparts.cpu_profile 0
+if [[ `getprop persist.realmeparts.perf_profile` == "" ]]; then
+    setprop persist.realmeparts.perf_profile 1
 fi
 
 if [[ `getprop persist.realmeparts.battery_saver` == "" ]]; then

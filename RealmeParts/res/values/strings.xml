@@ -176,25 +176,19 @@
     <string name="raise_to_wake_gesture_summary">Wake up the device instead of pulsing notification</string>
 
     <!-- Boosts -->
-    <string name="boost_title">Boost</string>
-    <string name="gpuboost_title">GPU boost</string>
-    <string name="cpuboost_title">CPU boost</string>
-    <string name="gpuboost_dialogTitle">Select your GPU boost level</string>
-    <string name="cpuboost_dialogTitle">Select your CPU boost level</string>
+    <string name="performancemode_title">Performance</string>
+    <string name="perfboost_title">Performance Mode</string>
+    <string name="perfboost_dialogTitle">Select your mode</string>
 
     <!-- GPU/CPU Boost Presets -->
-    <string name="gpuboost_high">High</string>
-    <string name="gpuboost_medium">Medium</string>
-    <string name="gpuboost_low">Low</string>
-    <string name="gpuboost_disable">Disable</string>
 
-    <string name="cpuboost_high">High</string>
-    <string name="cpuboost_medium">Medium</string>
-    <string name="cpuboost_low">Low</string>
-    <string name="cpuboost_disable">Disable</string>
+    <string name="perfboost_high">High performance</string>
+    <string name="perfboost_medium">Medium performance</string>
+    <string name="perfboost_low">Low performance</string>
+    <string name="perfboost_disable">No performance</string>
 
     <!--Battery Saver-->
-    <string name="batterysaver_title">Battery Saver</string>
+    <string name="batterysaver_title">KBattery Saver</string>
     <string name="battery_saver_title">Battery Saver</string>
     <string name="battery_saver_summary">Kernelspace Battery Saver (Disables all boosts kernel level)</string>
 

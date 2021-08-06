@@ -33,26 +33,17 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-      android:key="boost"
-      android:title="@string/boost_title" >
+      android:key="performancemode"
+      android:title="@string/performancemode_title" >
 
-      <org.aospextended.device.device.preferences.SecureSettingListPreference
-          android:key="gpuboost"
-          android:dialogTitle="@string/gpuboost_dialogTitle"
-          android:entries="@array/gpuboost_profiles"
-          android:entryValues="@array/gpuboost_values"
-          android:icon="@drawable/ic_gpuboost"
-          android:defaultValue="0"
-          android:title="@string/gpuboost_title" />
-
-      <org.aospextended.device.device.preferences.SecureSettingListPreference
-          android:key="cpuboost"
-          android:dialogTitle="@string/cpuboost_dialogTitle"
-          android:entries="@array/cpuboost_profiles"
-          android:entryValues="@array/cpuboost_values"
-          android:icon="@drawable/ic_cpuboost"
-          android:defaultValue="0"
-          android:title="@string/cpuboost_title" />
+    <org.aospextended.device.device.preferences.SecureSettingListPreference
+        android:key="perfboost"
+        android:dialogTitle="@string/perfboost_dialogTitle"
+        android:entries="@array/perfboost_profiles"
+        android:entryValues="@array/perfboost_values"
+        android:icon="@drawable/ic_cpuboost"
+        android:defaultValue="0"
+        android:title="@string/perfboost_title" />
 
     </PreferenceCategory>
     <PreferenceCategory

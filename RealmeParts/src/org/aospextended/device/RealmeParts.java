@@ -69,14 +69,11 @@ public class RealmeParts extends PreferenceFragment implements
     private Preference mGesturesPref;
     private VibratorStrengthPreference mVibratorStrength;
 
-    public static final String DEFAULT_VALUE = "0";
-    public static final String PREF_GPUBOOST = "gpuboost";
-    public static final String GPUBOOST_SYSTEM_PROPERTY = "persist.realmeparts.gpu_profile";
+    public static final String DEFAULT_VALUE = "1";
 
-    public static final String PREF_CPUBOOST = "cpuboost";
-    public static final String CPUBOOST_SYSTEM_PROPERTY = "persist.realmeparts.cpu_profile";
-    private SecureSettingListPreference mGPUBOOST;
-    private SecureSettingListPreference mCPUBOOST;
+    public static final String PERF_CPUBOOST = "perfboost";
+    public static final String PERFMODE_SYSTEM_PROPERTY = "persist.realmeparts.perf_profile";
+    private SecureSettingListPreference mPERFMODE;
 
     public static final String BATTERY_SAVER = "battery_saver";
     public static final String BATTERYSAVER_SYSTEM_PROPERTY = "persist.realmeparts.battery_saver";
@@ -109,21 +106,16 @@ public class RealmeParts extends PreferenceFragment implements
         mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
 
         //boosts
-        mGPUBOOST = (SecureSettingListPreference) findPreference(PREF_GPUBOOST);
-        mGPUBOOST.setValue(FileUtils.getStringProp(GPUBOOST_SYSTEM_PROPERTY, "0"));
-        mGPUBOOST.setSummary(mGPUBOOST.getEntry());
-        mGPUBOOST.setOnPreferenceChangeListener(this);
 
-        mCPUBOOST = (SecureSettingListPreference) findPreference(PREF_CPUBOOST);
-        mCPUBOOST.setValue(FileUtils.getStringProp(CPUBOOST_SYSTEM_PROPERTY, "0"));
-        mCPUBOOST.setSummary(mCPUBOOST.getEntry());
-        mCPUBOOST.setOnPreferenceChangeListener(this);
+        mPERFMODE = (SecureSettingListPreference) findPreference(PERF_CPUBOOST);
+        mPERFMODE.setValue(FileUtils.getStringProp(PERFMODE_SYSTEM_PROPERTY, "1"));
+        mPERFMODE.setSummary(mPERFMODE.getEntry());
+        mPERFMODE.setOnPreferenceChangeListener(this);
 
         //battery Saver
         mbatterysaver = (SwitchPreference) findPreference(BATTERY_SAVER);
         mbatterysaver.setOnPreferenceChangeListener(this);
-        mCPUBOOST.setDependency(BATTERY_SAVER);
-        mGPUBOOST.setDependency(BATTERY_SAVER);
+        mPERFMODE.setDependency(BATTERY_SAVER);
 
     }
 
@@ -148,24 +140,16 @@ public class RealmeParts extends PreferenceFragment implements
       final String key = preference.getKey();
         switch (key) {
 
-            case PREF_GPUBOOST:
-               mGPUBOOST.setValue((String) newValue);
-               mGPUBOOST.setSummary(mGPUBOOST.getEntry());
-               FileUtils.setStringProp(GPUBOOST_SYSTEM_PROPERTY, (String) newValue);
-               break;
-            case PREF_CPUBOOST:
-               mCPUBOOST.setValue((String) newValue);
-               mCPUBOOST.setSummary(mCPUBOOST.getEntry());
-               FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY, (String) newValue);
+            case PERF_CPUBOOST:
+               mPERFMODE.setValue((String) newValue);
+               mPERFMODE.setSummary(mPERFMODE.getEntry());
+               FileUtils.setStringProp(PERFMODE_SYSTEM_PROPERTY, (String) newValue);
                break;
             case BATTERY_SAVER:
                FileUtils.setProp(BATTERYSAVER_SYSTEM_PROPERTY, (Boolean) newValue);
-               mGPUBOOST.setValue(DEFAULT_VALUE);
-               mGPUBOOST.setSummary(mGPUBOOST.getEntry());
-               mCPUBOOST.setValue(DEFAULT_VALUE);
-               mCPUBOOST.setSummary(mCPUBOOST.getEntry());
-               FileUtils.setStringProp(CPUBOOST_SYSTEM_PROPERTY,DEFAULT_VALUE);
-               FileUtils.setStringProp(GPUBOOST_SYSTEM_PROPERTY,DEFAULT_VALUE);
+               mPERFMODE.setValue(DEFAULT_VALUE);
+               mPERFMODE.setSummary(mPERFMODE.getEntry());
+               FileUtils.setStringProp(PERFMODE_SYSTEM_PROPERTY,DEFAULT_VALUE);
                break;
 
 

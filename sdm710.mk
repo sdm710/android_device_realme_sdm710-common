@@ -195,7 +195,8 @@ PRODUCT_PACKAGES += \
     init.target.rc \
     init.network.rc \
     ueventd.qcom.rc \
-    init.devicesetting.rc
+    init.devicesetting.rc \
+    init.realmeparts.sh
 
 # Display
 PRODUCT_PACKAGES += \
