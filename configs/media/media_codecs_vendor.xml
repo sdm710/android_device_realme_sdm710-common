@@ -379,5 +379,4 @@ Only the three quirks included above are recognized at this point:
     <!--//Yanliang.Huang@PSW.MM.MediaServer.Player.1179795, 2018/11/01, Add for ffmpeg integration-->
     <Include href="media_codecs_ffmpeg.xml" />
     <!--#endif /* VENDOR_EDIT */-->
-    <Include href="media_codecs_dolby_audio.xml" />
 </MediaCodecs>

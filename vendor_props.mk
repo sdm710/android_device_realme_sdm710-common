@@ -28,7 +28,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
     vendor.voice.path.for.pcm.voip=true \
     vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.dolby.ds2.enabled=true \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
     vendor.audio.offload.multiple.enabled=false \
     vendor.audio.offload.passthrough=false \
     ro.vendor.audio.sdk.ssr=false \
@@ -85,7 +86,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.feature.vbat.enable=true \
     vendor.audio.feature.wsa.enable=false \
     vendor.audio.feature.audiozoom.enable=false \
-    vendor.audio.feature.snd_mon.enable=true \
+    vendor.audio.feature.snd_mon.enable=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
