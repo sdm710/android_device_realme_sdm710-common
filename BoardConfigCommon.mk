@@ -54,6 +54,9 @@ ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_SOURCE := kernel/realme/sdm710
 endif
 
+#Disable appended dtb.
+TARGET_COMPILE_WITH_MSM_KERNEL := true
+
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_BOARD_PLATFORM := sdm710
