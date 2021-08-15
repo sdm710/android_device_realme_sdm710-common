@@ -425,7 +425,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/qcom/display \
     hardware/qcom/media \
     vendor/qcom/opensource/audio-hal/primary-hal \
-		packages/apps/Bluetooth/
+    packages/apps/Bluetooth
 
 # Telephony
 PRODUCT_PACKAGES += \
