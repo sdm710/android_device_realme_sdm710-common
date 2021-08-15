@@ -425,19 +425,19 @@ on property:init.svc.zygote=restarting
 
 # Perf-Disable (default profile)
 on property:persist.realmeparts.perf_profile=0
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 0
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:0 1:0 2:0 3:0 4:0 5:0 6:0 7:0"
     write /sys/module/cpu_boost/parameters/input_boost_ms 0
 
 # Perf-Low
 on property:persist.realmeparts.perf_profile=1
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:748000 1:748000 2:748000 3:748000 4:748000 5:748000 6:979000 7:979000"
     write /sys/module/cpu_boost/parameters/input_boost_ms 200
 
 # Perf-Medium
 on property:persist.realmeparts.perf_profile=2
-    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 2
+    write /sys/class/kgsl/kgsl-3d0/devfreq/adrenoboost 3
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1209000 1:1209000 2:1209000 3:1209000 4:1209000 5:1209000 6:1363000 7:1363000"
     write /sys/module/cpu_boost/parameters/input_boost_ms 500
 
