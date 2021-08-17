@@ -2,18 +2,6 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <PreferenceCategory
-        android:title="@string/gestures">
-
-        <PreferenceScreen
-                android:key="screen_gestures"
-                android:summary="@string/gestures_dashboard_summary"
-                android:icon="@drawable/ic_settings_gestures"
-                android:title="@string/screen_off_gestures" />
-
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:title="@string/ambient_display_title">
 
         <PreferenceScreen
