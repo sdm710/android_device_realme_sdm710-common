@@ -933,7 +933,7 @@ vendor/radio/qcril_database/upgrade/7_version_update_ecc_table.sql
 odm/lib64/vendor.oplus.hardware.radio@1.0.so
 odm/lib64/vendor.oplus.hardware.appradio@1.0.so
 
-# Radio - IMS
+# Radio - IMS - QSSI (11600)
 -system_ext/app/uceShimService/uceShimService.apk
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
@@ -983,7 +983,7 @@ system_ext/lib/vendor.qti.hardware.radio.ims@1.4.so
 system_ext/lib/vendor.qti.ims.callinfo@1.0.so
 system_ext/lib/vendor.qti.ims.rcsconfig@1.0.so
 system_ext/lib/vendor.qti.imsrtpservice@3.0.so
--system_ext/priv-app/ims/ims.apk|35bdad3411774dded520258823d985e59affd914
+-system_ext/priv-app/ims/ims.apk|9bd9423a998eae93b2c94a4820459d7b33c8a51a
 system_ext/lib/libdiag_system.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
