@@ -219,4 +219,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=180 \
-    ro.zram.periodic_wb_delay_hours=24
+    ro.zram.periodic_wb_delay_hours=24 \
+    persist.vendor.usb.config.extra=none
