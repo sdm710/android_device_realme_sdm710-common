@@ -211,6 +211,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.sib16_support=1
 
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.usb.config.extra=adb
+
 # Wi-Fi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.aware.interface=wifi-aware0
@@ -219,5 +223,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.zram.mark_idle_delay_mins=60 \
     ro.zram.first_wb_delay_mins=180 \
-    ro.zram.periodic_wb_delay_hours=24 \
-    persist.vendor.usb.config.extra=none
+    ro.zram.periodic_wb_delay_hours=24
